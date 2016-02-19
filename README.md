@@ -4,3 +4,6 @@ This repository will be used to display any coding that I will do for CS 401. Th
 
 clock.ino
 This program will keep track of the time for the clock
+
+
+Code from http://www.instructables.com/id/Make-an-accurate-Arduino-clock-using-only-one-wire/
