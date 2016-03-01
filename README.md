@@ -7,3 +7,8 @@ This program will keep track of the time for the clock
 
 
 Code from http://www.instructables.com/id/Make-an-accurate-Arduino-clock-using-only-one-wire/
+
+shift.ino
+First attempt at shifting LED's on and off.
+
+![alt tag](https://raw.githubusercontent.com/twizzleness/cs401/master/trial.shift.jpg)
