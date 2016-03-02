@@ -1,9 +1,9 @@
 //Pin connected to latch pin (ST_CP) of 74HC595
 //const int latchPin = 8;
 //Pin connected to clock pin (SH_CP) of 74HC595
-const int clockPin = 12;
+const int clockPin = 9;
 ////Pin connected to Data in (DS) of 74HC595
-const int dataPin = 11;
+const int dataPin = 8;
 
 void setup() {
   // put your setup code here, to run once:
@@ -26,24 +26,19 @@ void loop() {
 //  // write to the shift register with the correct bit set high:
 //    registerWrite(bitToSet, HIGH);
 //  }
-shiftOut(dataPin, clockPin, LSBFIRST, HIGH);
-shiftOut(dataPin, clockPin, LSBFIRST, LOW);
+//for(int i = 0; i < 3; i++){
+//  shiftOut(dataPin, clockPin, MSBFIRST, B00000001 << i);
+//  delay(125);
+//}
+//shiftOut(dataPin, clockPin, LSBFIRST, LOW);
+  for(int i=0; i < 6000000; i++){
+    if(i == 3000){
+      turnLightsOn(B10001110);
+    }
+  }
 }
 
-void registerWrite(int whichPin, int whichState) {
-  // the bits you want to send
-  byte bitsToSend = 0;
-
-  // turn off the output so the pins don't light up
-  // while you're shifting bits:
- // digitalWrite(latchPin, LOW);
-
-  // turn on the next highest bit in bitsToSend:
-  bitWrite(bitsToSend, whichPin, whichState);
-
-  // shift the bits out:
-  shiftOut(dataPin, clockPin, MSBFIRST, bitsToSend);
-
-    // turn on the output so the LEDs can light up:
-  //digitalWrite(latchPin, HIGH);
+void turnLightsOn(int value) {
+  shiftOut(dataPin, clockPin, LSBFIRST, value);
+  delay(125);
 }
