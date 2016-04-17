@@ -9,12 +9,12 @@ This is the final implimentation of the code used to keep track of the time and 
 
 These files where how I started building up the code needed for the project
 
-clock.ino
+<b>clock.ino</b>
 
 This program will keep track of the time for the clock
 
 Code from http://www.instructables.com/id/Make-an-accurate-Arduino-clock-using-only-one-wire/
 
-shift.ino
+<b>shift.ino</b>
 
 First attempt at shifting LED's on and off.
