@@ -15,4 +15,4 @@ Code from http://www.instructables.com/id/Make-an-accurate-Arduino-clock-using-o
 shift.ino
 First attempt at shifting LED's on and off.
 
-![alt tag](trial.shift.jpg {width=40px height=400px})
+![alt tag](twizzleness.github.com/repository/trial.shift.jpg {width=40px height=400px})
